@@ -5,7 +5,7 @@ edition = "2018"
 description="NSCLDAQ Port manager client"
 homepage="http://docs.nscl.msu.edu/daq"
 license="GPL-2.0"
-repository="https://gitlab.msu.edu
+repository="https://gitlab.msu.edu/foxr/nscldaq_portman_client.git"
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
