@@ -7,6 +7,8 @@ homepage="http://docs.nscl.msu.edu/daq"
 license="GPL-2.0"
 repository="https://github.com/FRIBDAQ/rust-portman-client.git"
 
+[features]
+test_with_portman = []
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

@@ -1,4 +1,3 @@
-
 use std::io::{BufRead, BufReader, Write};
 use std::net::{Shutdown, TcpStream};
 use std::ops::Drop;
@@ -24,9 +23,7 @@ impl Error {
         match self {
             Error::ConnectionFailed => String::from("Connection to port manager failed"),
             Error::Unimplemented => String::from("This operation is not yet implemented"),
-            Error::AllocationFailed => {
-                String::from("Failed to allocate a port from the manager")
-            }
+            Error::AllocationFailed => String::from("Failed to allocate a port from the manager"),
             Error::ConnectionLost => String::from("connection with server lost"),
             Error::RequestDenied => String::from("Server returned a failure on the request."),
             Error::UnanticipatedReply => {
@@ -349,7 +346,15 @@ impl Drop for Client {
         }
     }
 }
-#[cfg(test)]
+
+// all tests are disabled here because in CI environments,  in general,
+// the nscldaq port manager is not running.  In a dev situation,
+// with the port manager running, you can runtests by
+//
+// cargo test --lib -F test_with_portman
+//
+//
+#[cfg(feature = "test_with_portman")]
 mod portman_ctests {
     use super::*;
     use whoami;
@@ -523,4 +528,3 @@ mod portman_ctests {
         assert_eq!(0, matches.len());
     }
 }
-
