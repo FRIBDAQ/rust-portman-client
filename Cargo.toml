@@ -1,15 +1,11 @@
 [package]
 name = "portman_client"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2018"
 description="NSCLDAQ Port manager client"
 homepage="http://docs.nscl.msu.edu/daq"
 license="GPL-2.0"
-<<<<<<< HEAD
-repository="https://gitlab.msu.edu/foxr/nscldaq_portman_client.git"
-=======
-repository="https://gitlab.msu.edu"
->>>>>>> f709ad2f5061e7a69018ac84c6c7425f24fbd7d9
+repository="https://github.com/FRIBDAQ/rust-portman-client.git"
 
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
